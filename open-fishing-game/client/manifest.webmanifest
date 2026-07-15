@@ -1,0 +1,10 @@
+{
+  "name": "Open Fishing Game",
+  "short_name": "FishGame",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#06283d",
+  "theme_color": "#06283d",
+  "orientation": "any",
+  "icons": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "open-fishing-game-server",
+  "version": "1.0.0",
+  "description": "Realtime multiplayer server for Open Fishing Game",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nanoid": "^5.0.7",
+    "socket.io": "^4.7.5"
+  }
+}

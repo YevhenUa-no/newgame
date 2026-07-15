@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Open Fishing Game</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #06283d;
+        overflow: hidden;
+        height: 100%;
+        touch-action: none;
+      }
+      #game-container {
+        width: 100vw;
+        height: 100vh;
+      }
+      #join-overlay {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(180deg, #0a3d62, #06283d 60%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        z-index: 10;
+        font-family: system-ui, sans-serif;
+        color: white;
+        text-align: center;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+      #join-overlay h1 {
+        font-size: 28px;
+        margin: 0 0 4px 0;
+      }
+      #join-overlay p {
+        opacity: 0.8;
+        margin: 0 0 12px 0;
+        max-width: 320px;
+      }
+      #name-input {
+        font-size: 18px;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: none;
+        width: 220px;
+        text-align: center;
+      }
+      #join-btn {
+        font-size: 18px;
+        padding: 10px 24px;
+        border-radius: 8px;
+        border: none;
+        background: #ffe66d;
+        color: #06283d;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #join-btn:active {
+        transform: scale(0.97);
+      }
+      #status {
+        font-size: 13px;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container"></div>
+    <div id="join-overlay">
+      <h1>🎣 Open Fishing Game</h1>
+      <p>An open-source, browser-based multiplayer fishing adventure. No install needed — just cast your line.</p>
+      <input id="name-input" maxlength="16" placeholder="Your angler name" />
+      <button id="join-btn">Dive In</button>
+      <div id="status">Connecting to server…</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
